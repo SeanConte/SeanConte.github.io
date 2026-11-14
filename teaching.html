@@ -110,6 +110,7 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 .tl .shot{display:block;width:100%;height:auto;border-radius:6px;margin-top:28px}
 .top{align-items:start}
 @media (max-width:620px){.app{grid-template-columns:1fr;gap:4px}}
+.ph{margin:0}.ph figcaption,.phr figcaption{font-family:var(--sans);font-size:12.5px;color:var(--ink3);margin-top:8px}
 </style>
 </head>
 <body>
@@ -127,7 +128,7 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 
 <main>
   <section class="top" aria-labelledby="h-top">
-    <div class="tl"><h1 id="h-top">Teaching</h1><img class="shot" src="images/teaching.jpg" alt="Sean Conte in conversation" width="960" height="720"></div>
+    <div class="tl"><h1 id="h-top">Teaching</h1><figure class="ph"><img class="shot" src="images/teaching.jpg" alt="Sean Conte in conversation" width="960" height="720"><figcaption>Photo by Alastair Norcross</figcaption></figure></div>
     <div>
       <blockquote>&ldquo;This class reminds me why I love to learn.&rdquo;</blockquote>
       <p class="cite">Student feedback</p>
@@ -147,15 +148,20 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
         <div class="app"><h3><a href="https://seanconte.github.io/truth-table-app/">Truth Tables</a></h3><div><p>A sandbox for analyzing statements with truth tables, a core part of propositional logic.</p></div></div>
         <div class="app"><h3><a href="https://seanconte.github.io/formal-language-app/">Formal Language</a></h3><div><p>Several visualizations of the syntax of a formal language.</p></div></div>
       </div>
+      <p class="group">Scientific reasoning</p>
+      <div class="apps">
+        <div class="app"><h3><a href="https://seanconte.github.io/theory-selection-app/">Theory Selection Suite</a></h3><div><p>Interactive experiments on evaluating competing theories: identify a hidden creature by elimination, design controlled experiments in a garden, and diagnose an outbreak through targeted testing.</p></div></div>
+        <div class="app"><h3><a href="https://seanconte.github.io/falsification/">Falsification Lab</a></h3><div><p>Run experiments to refute rival theories of a hidden rule, propose theories of your own, and see that the theories that survive are still unproven.</p></div></div>
+      </div>
       <p class="group">Probability</p>
       <div class="apps">
         <div class="app"><h3><a href="https://seanconte.github.io/probability-basics-app/">Probability Basics</a></h3><div><p>The core ideas of probability, shown in several settings.</p></div></div>
-        <div class="app"><h3><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/bayess-rule">Bayes&rsquo; Rule Visualizer</a></h3><div><p>How Bayes&rsquo; rule updates beliefs on evidence, shown without the formulas.</p></div></div>
+        <div class="app"><h3><a href="https://seanconte.github.io/bayes/rule/">Bayes&rsquo; Rule Visualizer</a></h3><div><p>How Bayes&rsquo; rule updates beliefs on evidence, shown without the formulas.</p><p class="sub"><a href="https://seanconte.github.io/bayes/convergence/">Convergence</a></p></div></div>
       </div>
       <p class="group">Data literacy</p>
       <div class="apps">
-        <div class="app"><h3><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/2d-visualizations">Data Visualizer</a></h3><div><p>How mean, variance, and correlation determine the shape of data, without the technical jargon.</p></div></div>
-        <div class="app"><h3><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/k-means-gmm-dbscan-comparison">Clustering Comparison</a></h3><div><p>K-means, Gaussian mixture modeling, and density-based clustering compared on the same data in real time.</p></div></div>
+        <div class="app"><h3><a href="https://seanconte.github.io/data-visualization/">Data Visualizer</a></h3><div><p>How mean, variance, and correlation determine the shape of data, without the technical jargon.</p></div></div>
+        <div class="app"><h3><a href="https://seanconte.github.io/clustering-comparison/">Clustering Comparison</a></h3><div><p>K-means, Gaussian mixture modeling, and density-based clustering compared on the same data in real time.</p></div></div>
       </div>
     </div>
   </section>
@@ -163,9 +169,9 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
   <section class="sec" aria-labelledby="h-as">
     <div><h2 id="h-as">Assignments</h2><p class="side">Instructions for the major assignments in my courses.</p></div>
     <ul class="syl">
-      <li><a href="https://sites.google.com/view/seanconteteaching/teaching/assignment-instructions/intro-paper-instructions">Paper instructions</a><span>Introduction to Philosophy</span></li>
-      <li><a href="https://sites.google.com/view/seanconteteaching/teaching/assignment-instructions/ethics-paper-instructions">Paper instructions</a><span>Ethics</span></li>
-      <li><a href="https://sites.google.com/view/seanconteteaching/teaching/assignment-instructions/ethics-group-instructions">Group project instructions</a><span>Ethics</span></li>
+      <li><a href="https://seanconte.github.io/writing-assignments/IntroPaperInstructions.html">Paper instructions</a><span>Introduction to Philosophy</span></li>
+      <li><a href="https://seanconte.github.io/writing-assignments/EthicsPaperInstructions.html">Paper instructions</a><span>Ethics</span></li>
+      <li><a href="https://seanconte.github.io/writing-assignments/EthicsGroupInstructions.html">Group project instructions</a><span>Ethics</span></li>
     </ul>
   </section>
 
@@ -203,9 +209,9 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
       <div class="inst">
         <h3>Texas A&amp;M University</h3>
         <table>
-          <tr><td>Introduction to Logic</td><td>Summers 2018 and 2019</td></tr>
+          <tr><td>Introduction to Logic</td><td>Summers 2018, 2019, and 2021</td></tr>
           <tr><td>Introduction to Logic, teaching assistant</td><td>21 sections, Fall 2017 to Fall 2020</td></tr>
-          <tr><td>Introduction to Philosophy</td><td>4 sections, Spring 2021 to Fall 2022</td></tr>
+          <tr><td>Introduction to Philosophy</td><td>3 sections, Spring 2021 to Fall 2022</td></tr>
           <tr><td>Philosophy of Mind</td><td>Spring 2023</td></tr>
           <tr><td>Environmental Ethics, teaching assistant</td><td>Spring 2019</td></tr>
         </table>
