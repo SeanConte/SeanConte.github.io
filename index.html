@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sean Conte</title>
+<meta name="description" content="Sean Conte, Assistant Professor of Philosophy at the Community College of Denver. Research on how a community's structure shapes its epistemic capacities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4F2;--surface:#FFFFFF;--ink:#16202B;--ink2:#55616C;--ink3:#8C969E;--line:#D3DAD9;--wash:#E6ECEA;--sv:#2E78C7;
+  --serif:"STIX Two Text","STIX Two",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--sv);outline-offset:3px;border-radius:2px}
+
+.bar{border-bottom:1px solid var(--line)}
+.bar-inner{max-width:1120px;margin:0 auto;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:var(--sans);font-size:15px}
+.bar .name{font-weight:600;text-decoration:none}
+.bar nav{display:flex;gap:22px}
+.bar nav a{text-decoration:none;color:var(--ink2);padding:4px 0;border-bottom:2px solid transparent}
+.bar nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+main{max-width:1120px;margin:0 auto;padding:0 32px}
+
+.intro{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end;padding:80px 0 72px}
+.portrait{margin:0}
+.portrait .frame{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--wash);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-family:var(--sans);font-size:14px}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait figcaption{font-family:var(--sans);font-size:12.5px;color:var(--ink3);margin-top:8px}
+h1{font-weight:500;font-size:clamp(2.6rem,5.2vw,4.2rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 14px}
+.role{font-size:1.35rem;line-height:1.35;margin:0 0 22px}
+.degrees{list-style:none;margin:0 0 26px;padding:0;font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--ink2)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;font-family:var(--sans);font-size:15px}
+.contact .mail{letter-spacing:.02em}
+.btn{display:inline-block;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:5px;padding:7px 16px}
+.btn:hover{background:var(--ink);color:var(--surface)}
+
+.rows{border-top:1px solid var(--line);margin-bottom:96px}
+.rowi{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;padding:44px 0;border-bottom:1px solid var(--line)}
+.rowi h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.rowi h2 a{text-decoration:none}
+.rowi h2 a:hover{text-decoration:underline}
+.rowi p{margin:0 0 .9em;max-width:36em}
+.rowi p:last-child{margin-bottom:0}
+.lead{font-size:1.45rem;line-height:1.35}
+.more{font-family:var(--sans);font-size:15px;font-weight:500}
+
+footer{border-top:1px solid var(--line);font-family:var(--sans);font-size:14px;color:var(--ink2)}
+footer .inner{max-width:1120px;margin:0 auto;padding:22px 32px 40px}
+
+@media (max-width:860px){
+  .intro,.rowi{grid-template-columns:1fr;gap:28px}
+  .intro{padding:44px 0 48px}
+  .portrait{max-width:280px}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  main,.bar-inner,footer .inner{padding-left:18px;padding-right:18px}
+}
+.bar nav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--ink)}
+footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="name" href="index.html">Sean Conte</a>
+    <nav aria-label="Site">
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="https://drive.google.com/file/d/1tIz8tdLK5idipTz_29cb7S2zvaX9q35g/view?usp=drive_link">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro" aria-labelledby="name">
+    <figure class="portrait">
+      <div class="frame"><img src="images/portrait.jpg" alt="Sean Conte" width="720" height="900"></div>
+      <figcaption>Photo by Alastair Norcross</figcaption>
+    </figure>
+    <div>
+      <h1 id="name">Sean Conte</h1>
+      <p class="role">Assistant Professor of Philosophy<br>Community College of Denver</p>
+      <ul class="degrees">
+        <li>Ph.D. in Philosophy, Texas A&amp;M University, Logic and Decision Theory track</li>
+        <li>B.A. in Mathematics and Philosophy, minor in Economics, Fort Lewis College</li>
+      </ul>
+      <div class="contact">
+        <span class="mail">SEAN dot CONTE at CCD dot EDU</span>
+        <a class="btn" href="https://drive.google.com/file/d/1tIz8tdLK5idipTz_29cb7S2zvaX9q35g/view?usp=drive_link">CV</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="rows">
+    <section class="rowi" aria-labelledby="h-r">
+      <h2 id="h-r"><a href="research.html">Research</a></h2>
+      <div>
+        <p class="lead">I investigate how a community&rsquo;s structure shapes its epistemic capacities.</p>
+        <p>I use formal models to study how consensus, disagreement, reliability, and resilience emerge from how a community&rsquo;s members interact, and I apply the results to scientific communities and to public discourse shaped by social media and AI. Each project on the research page comes with a small interactive version of its model.</p>
+        <p class="more"><a href="research.html">Research projects and models</a></p>
+      </div>
+    </section>
+
+    <section class="rowi" aria-labelledby="h-t">
+      <h2 id="h-t"><a href="teaching.html">Teaching</a></h2>
+      <div>
+        <p>I teach Logic, Ethics, and Introduction to Philosophy at the Community College of Denver. Alongside my courses I build free interactive web apps, including a natural deduction proof assistant that my logic course is built around, along with apps for truth tables, formal syntax, and probability.</p>
+        <p class="more"><a href="teaching.html">Courses and apps</a></p>
+      </div>
+    </section>
+
+    <section class="rowi" aria-labelledby="h-s">
+      <h2 id="h-s">Service</h2>
+      <div>
+        <p>I served on CCD&rsquo;s AI Governance Committee, and this year I am running a series of workshops on AI for faculty. I also started a small undergraduate research group at CCD, after directing an undergraduate modeling research group at Texas A&amp;M.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>SEAN dot CONTE at CCD dot EDU</span>
+    <a href="other.html">Reading and side projects</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading and side projects | Sean Conte</title>
+<meta name="description" content="Book suggestions, tips for reading, and side projects from Sean Conte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4F2;--surface:#FFFFFF;--ink:#16202B;--ink2:#55616C;--ink3:#8C969E;--line:#D3DAD9;--wash:#E6ECEA;--sv:#2E78C7;
+  --serif:"STIX Two Text","STIX Two",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--sv);outline-offset:3px;border-radius:2px}
+
+.bar{border-bottom:1px solid var(--line)}
+.bar-inner{max-width:1120px;margin:0 auto;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:var(--sans);font-size:15px}
+.bar .name{font-weight:600;text-decoration:none}
+.bar nav{display:flex;gap:22px}
+.bar nav a{text-decoration:none;color:var(--ink2);padding:4px 0;border-bottom:2px solid transparent}
+.bar nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+main{max-width:1120px;margin:0 auto;padding:0 32px}
+
+.intro{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end;padding:80px 0 72px}
+.portrait{margin:0}
+.portrait .frame{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--wash);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-family:var(--sans);font-size:14px}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait figcaption{font-family:var(--sans);font-size:12.5px;color:var(--ink3);margin-top:8px}
+h1{font-weight:500;font-size:clamp(2.6rem,5.2vw,4.2rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 14px}
+.role{font-size:1.35rem;line-height:1.35;margin:0 0 22px}
+.degrees{list-style:none;margin:0 0 26px;padding:0;font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--ink2)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;font-family:var(--sans);font-size:15px}
+.contact .mail{letter-spacing:.02em}
+.btn{display:inline-block;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:5px;padding:7px 16px}
+.btn:hover{background:var(--ink);color:var(--surface)}
+
+.rows{border-top:1px solid var(--line);margin-bottom:96px}
+.rowi{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;padding:44px 0;border-bottom:1px solid var(--line)}
+.rowi h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.rowi h2 a{text-decoration:none}
+.rowi h2 a:hover{text-decoration:underline}
+.rowi p{margin:0 0 .9em;max-width:36em}
+.rowi p:last-child{margin-bottom:0}
+.lead{font-size:1.45rem;line-height:1.35}
+.more{font-family:var(--sans);font-size:15px;font-weight:500}
+
+footer{border-top:1px solid var(--line);font-family:var(--sans);font-size:14px;color:var(--ink2)}
+footer .inner{max-width:1120px;margin:0 auto;padding:22px 32px 40px}
+
+@media (max-width:860px){
+  .intro,.rowi{grid-template-columns:1fr;gap:28px}
+  .intro{padding:44px 0 48px}
+  .portrait{max-width:280px}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  main,.bar-inner,footer .inner{padding-left:18px;padding-right:18px}
+}
+
+.top{padding:80px 0 56px;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end}
+.top p{margin:0;max-width:36em}
+blockquote{margin:0 0 22px;font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.25;font-style:italic;max-width:22em}
+blockquote+.cite{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:-10px 0 26px}
+.sec{border-top:1px solid var(--line);padding:52px 0;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px}
+.sec h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.sec .side{font-family:var(--sans);font-size:15px;color:var(--ink2);margin:10px 0 0;max-width:20em;line-height:1.5}
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:26px 28px;margin-bottom:22px}
+.feature h3{font-weight:500;font-size:1.55rem;margin:0 0 8px}
+.feature p{margin:0 0 .8em;max-width:36em}
+.apps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.app{padding:18px 0;border-top:1px solid var(--line)}
+.app h3{font-family:var(--sans);font-size:16.5px;font-weight:600;margin:0 0 4px}
+.app h3 a{text-decoration:none}.app h3 a:hover{text-decoration:underline}
+.app p{margin:0;font-size:17px;line-height:1.55;color:var(--ink)}
+.group{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:26px 0 4px}
+.group:first-of-type{margin-top:0}
+.links{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--sans);font-size:15px}
+.links a{font-weight:500}
+.syl{list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:15.5px}
+.syl li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--line)}
+.syl li:last-child{border-bottom:1px solid var(--line)}
+.syl a{font-weight:500}
+.syl span{color:var(--ink2)}
+.inst{margin:0 0 30px}
+.inst:last-child{margin-bottom:0}
+.inst h3{font-weight:500;font-size:1.25rem;margin:0 0 6px}
+.inst table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:15px}
+.inst td{padding:8px 0;border-top:1px solid var(--line);vertical-align:top}
+.inst td:last-child{text-align:right;color:var(--ink2);padding-left:16px;white-space:nowrap}
+@media (max-width:860px){.top,.sec{grid-template-columns:1fr;gap:24px}.top{padding:44px 0 36px}.apps{grid-template-columns:1fr}}
+@media (max-width:560px){.inst td:last-child{white-space:normal}}
+.bar nav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--ink)}
+footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
+.apps{display:block}
+.app{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:16px 0;border-top:1px solid var(--line)}
+.app h3{margin:2px 0 0}
+.app p{margin:0}
+.app .sub{font-family:var(--sans);font-size:14.5px;margin-top:6px}
+.apps:last-of-type .app:last-child{border-bottom:1px solid var(--line)}
+.group{margin:30px 0 6px}
+.tl .shot{display:block;width:100%;height:auto;border-radius:6px;margin-top:28px}
+.top{align-items:start}
+@media (max-width:620px){.app{grid-template-columns:1fr;gap:4px}}
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px;max-width:300px}
+.cats img{display:block;width:100%;height:auto;border-radius:6px}
+.top .intro{margin:0;max-width:36em}
+.book{padding:22px 0;border-top:1px solid var(--line)}
+.book:last-child{border-bottom:1px solid var(--line)}
+.book h3{font-weight:500;font-size:1.3rem;line-height:1.3;margin:0}
+.book .by{font-family:var(--sans);font-size:14.5px;color:var(--ink2);margin:2px 0 10px}
+.book p{margin:0 0 .8em;max-width:36em}
+.book p:last-child{margin-bottom:0}
+.lede{margin:0 0 18px;max-width:36em}
+details{border-top:1px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--sans);font-size:16px;font-weight:600}
+.tips{margin:14px 0 4px;padding-left:1.3em;max-width:36em}
+.tips li{margin:0 0 .8em}
+.tips b{font-weight:600}
+.proj{list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:15.5px;columns:2;column-gap:36px}
+.proj li{break-inside:avoid;padding:10px 0;border-top:1px solid var(--line)}
+.proj a{font-weight:500}
+.russell{padding:40px 0 64px;border-top:1px solid var(--line)}
+.russell .q{max-width:46em;margin:0 auto;font-size:13px;line-height:1.55;font-style:normal;color:var(--ink2)}
+.russell .q p{margin:0 0 .7em}
+.russell cite{display:block;font-style:normal;font-family:var(--sans);font-size:12px;color:var(--ink3);margin-top:10px}
+@media (max-width:620px){.proj{columns:1}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="name" href="index.html">Sean Conte</a>
+    <nav aria-label="Site">
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="https://drive.google.com/file/d/1tIz8tdLK5idipTz_29cb7S2zvaX9q35g/view?usp=drive_link">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="top" aria-labelledby="h-top">
+    <div class="tl">
+      <h1 id="h-top">Reading and side projects</h1>
+      <div class="cats"><img src="images/cat-1.jpg" alt="A black and white cat on a plaid blanket" width="480" height="480"><img src="images/cat-2.jpg" alt="A black and white cat looking to the side" width="480" height="480"></div>
+    </div>
+    <p class="intro">Some things I&rsquo;ve built that don&rsquo;t fit anywhere else, followed by books that are insightful, informative, or useful, with advice on how to get into (or be more consistent about) reading.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="h-proj">
+    <div><h2 id="h-proj">Side projects</h2></div>
+    <ul class="proj">
+      <li><a href="https://seanconte.github.io/audio-visualizer/">Music Visualizer</a></li><li><a href="https://seanconte.github.io/chess-game/">Chess II</a></li><li><a href="https://seanconte.github.io/geography-puzzle/">Geography Puzzle</a></li><li><a href="https://seanconte.github.io/scoreboard/">Scoreboard</a></li><li><a href="https://seanconte.github.io/crossstitch/">Cross-stitch Hoop Calculator</a></li><li><a href="https://seanconte.github.io/modular-cooking/">Cooking &amp; Baking</a></li><li><a href="https://sites.google.com/view/seanconteteaching/other/dashboardsapplications">Experimenting with Dashboards</a></li>
+    </ul>
+  </section>
+
+  <section class="sec" aria-labelledby="h-nf">
+    <div><h2 id="h-nf">Nonfiction</h2></div>
+    <div>
+      <p class="lede">These books capture some of the most important advances in how we approach the biggest questions, including those concerning science, intelligence, probability, causation, emergence, society, language, awareness, and consciousness.</p>
+      <article class="book"><h3>The Knowledge Machine</h3><p class="by">Michael Strevens (2020)</p><p>Strevens begins by outlining perhaps the two most influential ways of approaching science: a system of pure, dispassionate rationality, undermined to the extent that any bias or personal feeling is involved (exemplified by Karl Popper&rsquo;s view), vs. a system inherently tied to the tastes of a community, tastes which cannot be rationally compared (exemplified by Thomas Kuhn&rsquo;s view). But the real value of this book is not merely a careful retelling of both the history of science and the history of the philosophy of science, but how he uses that discussion to formulate a view that sits between the Popperians and Kuhnians.</p><p>Beyond what Strevens explicitly discusses, this is a great example of complex behavior: irrational individuals (scientists) can form rational systems (science).</p></article>
+<article class="book"><h3>Other Minds</h3><p class="by">Peter Godfrey-Smith (2016)</p><p>What is a mind? What is cognition? What does it mean to think? I&rsquo;m sure you already have views on all of this; it&rsquo;s almost impossible not to. Some of those views are probably clear in your head, things you&rsquo;ve considered explicitly, maybe even gone back and forth on. But other aspects of your approach are invisible to you. There are assumptions you haven&rsquo;t unearthed. (If you think this isn&rsquo;t true for you, then it&rsquo;s especially true for you.) These assumptions are the ultimate target of PGS&rsquo;s <i>Other Minds</i>.</p><p>Octopuses (and their relatives like cuttlefish) are the only intelligent creatures in the known universe that have evolved intelligence and cognition independently from our lineage. In a sense, intelligence evolved twice: in humans&rsquo; predecessors and in octopuses&rsquo; predecessors. This makes octopuses quite possibly the closest thing we can get to alien intelligence. As such, they provide a beautiful case study for investigating what we think intelligence, consciousness, identity, etc. really are.</p></article>
+<article class="book"><h3>Games: Agency as Art</h3><p class="by">C. Thi Nguyen (2020)</p><p>John Dewey has a famous idea that the various arts are ways of crystallizing forms of human experience. Paintings crystallize a visual experience. Songs crystallize audible experience. Books, as Martha Nussbaum points out, crystallize narrative experience. In <i>G:AaA</i>, Nguyen argues that games (sports, tabletop, video) crystallize agency. Works of art are ways of framing particular aspects of human experience, and one crucial aspect is what it&rsquo;s like to have a certain set of abilities with which to overcome obstacles. His analysis includes numerous helpful frameworks and distinctions which ultimately find application in analyzing the gamification of life as well as the mentality of conspiracy theorists.</p><p>Forewarning, this book is more dense than you might expect from a book about games. It doesn&rsquo;t shy away from substantive and hard-fought debates in the philosophy of aesthetics. In doing so, it provides an entry point from which to see the numerous ways in which we can discuss art. If you think philosophy of art is just about &ldquo;Is art objective?&rdquo;, this book will forcefully introduce you to a much deeper and more complex world.</p></article>
+<article class="book"><h3>The Enigma of Reason</h3><p class="by">Hugo Mercier &amp; Dan Sperber (2017)</p><p>Mercier and Sperber start with a double enigma: First, if the capacity to reason is so useful, then why haven&rsquo;t other animals evolved to do it? Second, why are humans, with all of their cognitive biases, so seemingly bad at reasoning? These questions lead the authors into an investigation of what reason is, what intuition is, what a self is, and more. Ultimately, they dispense with the idea of a &ldquo;stage&rdquo; which thoughts come across and develop an account in which reasons are originally and still primarily social.</p></article>
+<article class="book"><h3>The Philosophical Foundations of Bayesianism: An Opinionated Introduction</h3><p class="by">Kenny Easwaran</p></article>
+<article class="book"><h3>What Is a Complex System?</h3><p class="by">James Ladyman &amp; Karoline Wiesner (2020)</p></article>
+<article class="book"><h3>The Complex World</h3><p class="by">David C. Krakauer (2024)</p></article>
+<article class="book"><h3>The Biggest Ideas in the Universe, Vol. 1: Space, Time, and Motion</h3><p class="by">Sean Carroll</p></article>
+<article class="book"><h3>The Book of Why</h3><p class="by">Judea Pearl &amp; Dana Mackenzie (2018)</p><p>&ldquo;Correlation is not causation!&rdquo; Yeah, we know... So then, what is causation? Traditional statistics has nervously shied away from this question in favor of merely recording data and their relationships. The Causal Revolution, which Pearl and his students began only a few decades ago, provides mathematical rigor to concepts that for centuries have been plagued with paradox, and as a result, has significantly impacted the worlds of artificial intelligence and machine learning.</p></article>
+<article class="book"><h3>The Theory That Would Not Die</h3><p class="by">Sharon McGrayne (2011)</p><p>P(H|E) = P(E|H)P(H)/P(E), also known as Bayes&rsquo; Theorem, holds a special place in many people&rsquo;s hearts. They are known as Bayesians. To those people, the theorem simultaneously solves some of the deepest mysteries of philosophy, dissolves paradoxes in the foundations of science, and describes how a thinking mind ought to deal with evidence. And while not everyone agrees on these philosophical points, no one denies the practical impact of Bayes&rsquo; Theorem on virtually every discipline that concerns statistics. However, Bayes&rsquo; Theorem had trouble ever coming to light. McGrayne explores the real history behind it, and how it had to prove its mettle in the most real-world scenario possible: World War II.</p></article>
+<article class="book"><h3>The God Particle</h3><p class="by">Leon Lederman with Dick Teresi (1993)</p><p>Since <i>Oppenheimer</i> (2023) reminded us that we are all physicists in our spare time, you might be left needing to scratch the itch of engaging material coupled with a legitimate explanation of some of the most important and hardest concepts in physics. The Nobel laureate Lederman is not only an expert on the topic but also in the accessibility of his writing. Yes, by the end, you will understand why the Higgs boson is so important, and you won&rsquo;t have to do any math.</p></article>
+<article class="book"><h3>Logicomix</h3><p class="by">Apostolos Doxiadis &amp; Christos Papadimitriou, with Alekos Papadatos (2008)</p><p>Mathematics was in an existential crisis. At the turn of the 20th century, mathematicians were panicking that their entire enterprise, the very field of mathematics, might crumble as a result of its own devices. <i>Logicomix</i> is a fun-to-read, semi-biographical graphic novel that traces the efforts of Bertrand Russell to build foundations of mathematics in logic while guarding against paradoxes. The result of his and others&rsquo; efforts is not only a firm foundation of mathematics, but the building blocks for modern computers.</p></article>
+<article class="book"><h3>If A, Then B</h3><p class="by">Michael Shenefelt &amp; Heidi White</p><p>Shenefelt &amp; White trace the history of logic from its discovery in Ancient Greece to its underpinning of modern computing. This book is an easy read that helps tie together historical, philosophical, and practical matters to provide the reader a more well-rounded grasp of perhaps the most important science there is.</p></article>
+<article class="book"><h3>The Model Thinker</h3><p class="by">Scott E. Page (2018)</p><p>This book does two things: First, it explains the concept of many-model thinking, in which a thinker utilizes a library of models (never just one) to understand real-world dynamics and events. Second, it provides a library of models to do so. After reading, the book serves as a toolbelt of models that can be used to analyze countless situations across essentially any domain.</p></article>
+<article class="book"><h3>Philosophical Devices</h3><p class="by">David Papineau</p><p>This is a good handbook to keep near your desk if starting out in analytic philosophy. Analytic philosophers have developed many tools for carefully handling things. There are countless concepts that people use intuitively and colloquially but experts use carefully and with explicit definitions. Papineau has gathered an impressive number of these into this short book.</p></article>
+<article class="book"><h3>Philosophical Writing</h3><p class="by">A. P. Martinich</p><p>Writing is hard. Even in a philosophy class, we don&rsquo;t have much (or any, really) time to go over writing techniques. There is simply too much material to get to. Even still, writing is not arbitrary. Learning how to be a better writer enables you to be a better thinker, because writing is simply a different form of thinking. Further, it can make you a better reader. You&rsquo;ll be able to notice various structures and devices of authors that allow you a better window into their intent.</p></article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-fi">
+    <div><h2 id="h-fi">Fiction</h2></div>
+    <div>
+      <p class="lede">A short list of some of my favorite fiction. It isn&rsquo;t everything, but it provides a good variety of things to get into. While accessible, each one explores multiple philosophical themes.</p>
+      <article class="book"><h3>Exhalation</h3><p class="by">Ted Chiang (2019)</p></article>
+<article class="book"><h3>Children of Time</h3><p class="by">Adrian Tchaikovsky (2015)</p></article>
+<article class="book"><h3>Kindred</h3><p class="by">Octavia E. Butler (1979)</p></article>
+<article class="book"><h3>Never Let Me Go</h3><p class="by">Kazuo Ishiguro (2005)</p></article>
+<article class="book"><h3>The Left Hand of Darkness</h3><p class="by">Ursula K. Le Guin (1969)</p></article>
+<article class="book"><h3>Yellowface</h3><p class="by">R. F. Kuang (2023)</p></article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-tips">
+    <div><h2 id="h-tips">Tips for reading</h2><p class="side">For when you are starting out.</p></div>
+    <div>
+      <details><summary>Reading nonfiction</summary><ol class="tips"><li><b>Don&rsquo;t fetishize reading.</b> Read because you enjoy what you&rsquo;re reading, because you&rsquo;re getting something out of it, because you would do it regardless of whether people will ever know. The rest of this list is about cultivating that internal motivation.</li><li><b>Find your level.</b> Don&rsquo;t dive into the deep end when you haven&rsquo;t built up the tools yet. A comprehensive textbook is likely not the way for a beginner to start. Alternatively, don&rsquo;t read something too easy for you. It won&rsquo;t be interesting if you&rsquo;re not actually encountering new ideas.</li><li><b>Avoid sensationalized science.</b> A lot of things dubbed &ldquo;popular science&rdquo; try to sound cool but miss both the significance of the findings they&rsquo;re trying to explain and the mentality of a scientist. If an author is sensationalizing the science, making it sound more like fantasy or sci-fi, using buzzwords, and treating any new result as if it&rsquo;s earth-shattering, then they aren&rsquo;t focused and excited about the right things. Good nonfiction writers won&rsquo;t try to make something sound interesting by glossing over it with fantastical language. They will reveal how interesting something actually is by using language as clear and intuitive as possible. (Bad writers make basic things seem complicated. Good writers make complicated things seem basic.)</li><li><b>Look up words that you don&rsquo;t know.</b> That&rsquo;s kind of the point, right? You&rsquo;re trying to learn new ideas and approaches. Most key ideas should be defined in the thing you&rsquo;re reading, but sometimes there are words you just don&rsquo;t know. Maybe it&rsquo;s from the subject you&rsquo;re studying, but you haven&rsquo;t seen it yet. Maybe it&rsquo;s not tied to the subject, but still, you&rsquo;ve never seen it. This is a chance to dig deeper. Look up the definition. Fit it into what the writer is saying. If you have time, the etymology (history of the word) can be extremely informative.</li><li><b>Reread.</b> Sometimes you&rsquo;ll read something, and that won&rsquo;t be enough. Maybe there were things that were confusing. Maybe nothing was unclear in the moment, but looking back, you have no idea what the point of a chapter was. Don&rsquo;t think that just because you&rsquo;ve read something you should fully understand it. Give yourself time to go over tougher sections. Spend time on them.</li><li><b>Take notes.</b> Annotate the text or keep a side notebook to write down definitions, insights, thoughts, questions, concerns, etc. This has two main upshots. First, while reading, it helps you digest what you&rsquo;re reading. You understand things differently when you do the extra cognition and analysis involved in writing something down. Second, you&rsquo;ll be able to look back on these notes in the future. Things might seem fresh now, but in ten years, it&rsquo;d be ideal if you didn&rsquo;t have to read everything over again to remember what you thought. Your own personal notes will evoke your memories much better than any third-party synopsis.</li><li><b>Don&rsquo;t read multiple things at once.</b> It is common for people new to reading to get over-ambitious and try to read multiple things at once (setting something aside for days or weeks while reading other things). This almost always means that the person will give up on one of those things, or (more likely) that they already have but just don&rsquo;t realize it yet. Especially starting out (your first handful of stories or books), read only one thing at a time. Let that story take you. If it&rsquo;s not interesting enough to finish before the next thing, then it&rsquo;s not interesting enough to finish, full stop.</li><li><b>Frame your exploration in terms of questions, not answers.</b> One way to find things to read is to find things that reinforce how you already think about things (what answers you have already found). Alternatively, you could find things that help you ask new questions. What other ways can you think about your interests that you haven&rsquo;t even considered yet? This is not a question of reading those who disagree with you. This is about asking questions that you haven&rsquo;t even formulated answers for.</li><li><b>Reading is a skill, and like any skill, it needs to be developed.</b> Don&rsquo;t fall into the trap of thinking reading is some binary (yes or no) attribute that you either have or you don&rsquo;t. Just like sailing, painting, woodworking, etc., the more you do it, the better you will be at it. You&rsquo;ll be able to pick up on more ideas, ask further questions, follow more intricate and nuanced details. And like any skill, there&rsquo;s no finish line. It&rsquo;s not something you should ever feel like you&rsquo;re &ldquo;done&rdquo; with. It&rsquo;s something to get better at forever.</li></ol></details>
+      <details><summary>Reading fiction</summary><ol class="tips"><li><b>Don&rsquo;t fetishize reading.</b> Read because you enjoy what you&rsquo;re reading, because you&rsquo;re getting something out of it, because you would do it regardless of whether people will ever know. The rest of this list is about cultivating that internal motivation.</li><li><b>Start with short stories.</b> Some people have this strange idea that a short story is in some sense less significant or worthwhile than the &ldquo;sacred&rdquo; novel. But that&rsquo;s nonsense. Some stories simply take less time but can still be amazingly effective. And these are perfect for people who are trying to get into reading.</li><li><b>Find your page-turner genre.</b> &ldquo;Page-turner&rdquo; is thrown around all the time by reviewers, and what they mean is that you feel compelled to go to the next page. In the same way you might feel compelled to scroll just a little bit more on an app or play just a little bit more of a video game, a page-turner is something that does that for reading. And this is different for every person! You might really like mystery stories that make you doubt everything, or you may really crave hard sci-fi with mind-bending ideas. Don&rsquo;t force yourself to like things (more on this as we go).</li><li><b>Don&rsquo;t ask &ldquo;Is this good?&rdquo; Ask &ldquo;How do (or would) I like this?&rdquo;</b> The first question is about the &ldquo;objective quality of the work of art.&rdquo; That&rsquo;s all well and good, but it&rsquo;s a much different question to simply ask how you personally react to something. Set the bigger, much tougher question of the true value of the thing aside. Just ask yourself what you are getting out of something.</li><li><b>Don&rsquo;t start with &ldquo;the classics.&rdquo;</b> You can make your way to the classics if that&rsquo;s where your actual tastes lead. But you shouldn&rsquo;t start off just thinking, &ldquo;Well, I have to read <i>Moby Dick</i>, because that&rsquo;s supposed to be one of the greatest of all time!&rdquo; Chances are you aren&rsquo;t going to engage with it in the same way as the critics who are making those claims. Instead, keep reading what is immediately interesting in the moment. And at some point, you may find yourself saying, &ldquo;You know, I really am interested in how Melville arguably reinvents what it means to be a novel in the mid 19th century.&rdquo;</li><li><b>Be ready to give up on a story.</b> Just because you begin something doesn&rsquo;t mean you have to finish it. By the end of the first page, you should really want to know what happens on the second. If you don&rsquo;t feel that, next story.</li><li><b>Don&rsquo;t read multiple things at once.</b> It is common for people new to reading to get over-ambitious and try to read multiple things at once (as in, jumping between things from day to day). This almost always means that the person will give up on one of those things, or (more likely) that they already have but just don&rsquo;t realize it yet. Especially starting out (your first handful of stories or books), read only one thing at a time. Let that story take you. If it&rsquo;s not interesting enough to finish before the next thing, then it&rsquo;s not interesting enough to finish, full stop.</li><li><b>Reading is a skill, and like any skill, it needs to be developed.</b> Don&rsquo;t fall into the trap of thinking reading is some binary (yes or no) attribute that you either have or you don&rsquo;t. Just because you can pick out what letters make what words doesn&rsquo;t mean you&rsquo;re prepared to read anything and everything. Just like sailing, painting, woodworking, etc., the more you do it, the better you will be at it. You&rsquo;ll be able to pick up on more ideas, ask further questions, follow more intricate and nuanced details. And like any skill, there&rsquo;s no finish line. It&rsquo;s not something you should ever feel like you&rsquo;re &ldquo;done&rdquo; with. It&rsquo;s something to get better at forever.</li></ol></details>
+    </div>
+  </section>
+
+  <section class="russell" aria-label="Bertrand Russell on the value of philosophy">
+    <blockquote class="q"><p>&ldquo;Hence, once more, the value of philosophy must not depend upon any supposed body of definitely ascertainable knowledge to be acquired by those who study it.</p>
+<p>The value of philosophy is, in fact, to be sought largely in its very uncertainty. The man who has no tincture of philosophy goes through life imprisoned in the prejudices derived from common sense, from the habitual beliefs of his age or his nation, and from convictions which have grown up in his mind without the co-operation or consent of his deliberate reason. To such a man the world tends to become definite, finite, obvious; common objects rouse no questions, and unfamiliar possibilities are contemptuously rejected. As soon as we begin to philosophize, on the contrary, we find, as we saw in our opening chapters, that even the most everyday things lead to problems to which only very incomplete answers can be given. Philosophy, though unable to tell us with certainty what is the true answer to the doubts which it raises, is able to suggest many possibilities which enlarge our thoughts and free them from the tyranny of custom. Thus, while diminishing our feeling of certainty as to what things are, it greatly increases our knowledge as to what they may be; it removes the somewhat arrogant dogmatism of those who have never travelled into the region of liberating doubt, and it keeps alive our sense of wonder by showing familiar things in an unfamiliar aspect.</p>
+<p>Apart from its utility in showing unsuspected possibilities, philosophy has a value&mdash;perhaps its chief value&mdash;through the greatness of the objects which it contemplates, and the freedom from narrow and personal aims resulting from this contemplation. The life of the instinctive man is shut up within the circle of his private interests: family and friends may be included, but the outer world is not regarded except as it may help or hinder what comes within the circle of instinctive wishes. In such a life there is something feverish and confined, in comparison with which the philosophic life is calm and free. The private world of instinctive interests is a small one, set in the midst of a great and powerful world which must, sooner or later, lay our private world in ruins. Unless we can so enlarge our interests as to include the whole outer world, we remain like a garrison in a beleaguered fortress, knowing that the enemy prevents escape and that ultimate surrender is inevitable. In such a life there is no peace, but a constant strife between the insistence of desire and the powerlessness of will. In one way or another, if our life is to be great and free, we must escape this prison and this strife.&rdquo;</p>
+      <cite>Bertrand Russell, <i>The Problems of Philosophy</i> (1912), Chapter XV, &ldquo;The Value of Philosophy&rdquo;</cite>
+    </blockquote>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>SEAN dot CONTE at CCD dot EDU</span>
+    <a href="index.html">Home</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching | Sean Conte</title>
+<meta name="description" content="Sean Conte, Assistant Professor of Philosophy at the Community College of Denver. Courses, syllabi, and free interactive apps for logic, probability, and data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4F2;--surface:#FFFFFF;--ink:#16202B;--ink2:#55616C;--ink3:#8C969E;--line:#D3DAD9;--wash:#E6ECEA;--sv:#2E78C7;
+  --serif:"STIX Two Text","STIX Two",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--sv);outline-offset:3px;border-radius:2px}
+
+.bar{border-bottom:1px solid var(--line)}
+.bar-inner{max-width:1120px;margin:0 auto;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:var(--sans);font-size:15px}
+.bar .name{font-weight:600;text-decoration:none}
+.bar nav{display:flex;gap:22px}
+.bar nav a{text-decoration:none;color:var(--ink2);padding:4px 0;border-bottom:2px solid transparent}
+.bar nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+main{max-width:1120px;margin:0 auto;padding:0 32px}
+
+.intro{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end;padding:80px 0 72px}
+.portrait{margin:0}
+.portrait .frame{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--wash);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-family:var(--sans);font-size:14px}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait figcaption{font-family:var(--sans);font-size:12.5px;color:var(--ink3);margin-top:8px}
+h1{font-weight:500;font-size:clamp(2.6rem,5.2vw,4.2rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 14px}
+.role{font-size:1.35rem;line-height:1.35;margin:0 0 22px}
+.degrees{list-style:none;margin:0 0 26px;padding:0;font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--ink2)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;font-family:var(--sans);font-size:15px}
+.contact .mail{letter-spacing:.02em}
+.btn{display:inline-block;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:5px;padding:7px 16px}
+.btn:hover{background:var(--ink);color:var(--surface)}
+
+.rows{border-top:1px solid var(--line);margin-bottom:96px}
+.rowi{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;padding:44px 0;border-bottom:1px solid var(--line)}
+.rowi h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.rowi h2 a{text-decoration:none}
+.rowi h2 a:hover{text-decoration:underline}
+.rowi p{margin:0 0 .9em;max-width:36em}
+.rowi p:last-child{margin-bottom:0}
+.lead{font-size:1.45rem;line-height:1.35}
+.more{font-family:var(--sans);font-size:15px;font-weight:500}
+
+footer{border-top:1px solid var(--line);font-family:var(--sans);font-size:14px;color:var(--ink2)}
+footer .inner{max-width:1120px;margin:0 auto;padding:22px 32px 40px}
+
+@media (max-width:860px){
+  .intro,.rowi{grid-template-columns:1fr;gap:28px}
+  .intro{padding:44px 0 48px}
+  .portrait{max-width:280px}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  main,.bar-inner,footer .inner{padding-left:18px;padding-right:18px}
+}
+
+.top{padding:80px 0 56px;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end}
+.top p{margin:0;max-width:36em}
+blockquote{margin:0 0 22px;font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.25;font-style:italic;max-width:22em}
+blockquote+.cite{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:-10px 0 26px}
+.sec{border-top:1px solid var(--line);padding:52px 0;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px}
+.sec h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.sec .side{font-family:var(--sans);font-size:15px;color:var(--ink2);margin:10px 0 0;max-width:20em;line-height:1.5}
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:26px 28px;margin-bottom:22px}
+.feature h3{font-weight:500;font-size:1.55rem;margin:0 0 8px}
+.feature p{margin:0 0 .8em;max-width:36em}
+.apps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.app{padding:18px 0;border-top:1px solid var(--line)}
+.app h3{font-family:var(--sans);font-size:16.5px;font-weight:600;margin:0 0 4px}
+.app h3 a{text-decoration:none}.app h3 a:hover{text-decoration:underline}
+.app p{margin:0;font-size:17px;line-height:1.55;color:var(--ink)}
+.group{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:26px 0 4px}
+.group:first-of-type{margin-top:0}
+.links{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--sans);font-size:15px}
+.links a{font-weight:500}
+.syl{list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:15.5px}
+.syl li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--line)}
+.syl li:last-child{border-bottom:1px solid var(--line)}
+.syl a{font-weight:500}
+.syl span{color:var(--ink2)}
+.inst{margin:0 0 30px}
+.inst:last-child{margin-bottom:0}
+.inst h3{font-weight:500;font-size:1.25rem;margin:0 0 6px}
+.inst table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:15px}
+.inst td{padding:8px 0;border-top:1px solid var(--line);vertical-align:top}
+.inst td:last-child{text-align:right;color:var(--ink2);padding-left:16px;white-space:nowrap}
+@media (max-width:860px){.top,.sec{grid-template-columns:1fr;gap:24px}.top{padding:44px 0 36px}.apps{grid-template-columns:1fr}}
+@media (max-width:560px){.inst td:last-child{white-space:normal}}
+.bar nav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--ink)}
+footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
+.apps{display:block}
+.app{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:16px 0;border-top:1px solid var(--line)}
+.app h3{margin:2px 0 0}
+.app p{margin:0}
+.app .sub{font-family:var(--sans);font-size:14.5px;margin-top:6px}
+.apps:last-of-type .app:last-child{border-bottom:1px solid var(--line)}
+.group{margin:30px 0 6px}
+.tl .shot{display:block;width:100%;height:auto;border-radius:6px;margin-top:28px}
+.top{align-items:start}
+@media (max-width:620px){.app{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="name" href="index.html">Sean Conte</a>
+    <nav aria-label="Site">
+      <a href="research.html">Research</a>
+      <a href="teaching.html" aria-current="page">Teaching</a>
+      <a href="https://drive.google.com/file/d/1tIz8tdLK5idipTz_29cb7S2zvaX9q35g/view?usp=drive_link">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="top" aria-labelledby="h-top">
+    <div class="tl"><h1 id="h-top">Teaching</h1><img class="shot" src="images/teaching.jpg" alt="Sean Conte in conversation" width="960" height="720"></div>
+    <div>
+      <blockquote>&ldquo;This class reminds me why I love to learn.&rdquo;</blockquote>
+      <p class="cite">Student feedback</p>
+      <p>I teach Logic, Ethics, and Introduction to Philosophy at the Community College of Denver. I build free interactive web apps for my courses, and I post teaching videos on <a href="https://www.youtube.com/@SeanContePhD">YouTube</a>.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-apps">
+    <div>
+      <h2 id="h-apps">Apps</h2>
+      <p class="side">Each app runs in the browser with nothing to install, and each is free to use in any course.</p>
+    </div>
+    <div>
+      <p class="group">Logic</p>
+      <div class="apps">
+        <div class="app"><h3><a href="https://seanconte.github.io/proof-app/">Proofs</a></h3><div><p>A natural deduction proof assistant for propositional logic, and the backbone of my logic course. Guided mode teaches students how to decide which rule to use, and free mode teaches them how to use it.</p><p class="sub"><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/proofs-app-beta">2.0 beta version</a></p></div></div>
+        <div class="app"><h3><a href="https://seanconte.github.io/truth-table-app/">Truth Tables</a></h3><div><p>A sandbox for analyzing statements with truth tables, a core part of propositional logic.</p></div></div>
+        <div class="app"><h3><a href="https://seanconte.github.io/formal-language-app/">Formal Language</a></h3><div><p>Several visualizations of the syntax of a formal language.</p></div></div>
+      </div>
+      <p class="group">Probability</p>
+      <div class="apps">
+        <div class="app"><h3><a href="https://seanconte.github.io/probability-basics-app/">Probability Basics</a></h3><div><p>The core ideas of probability, shown in several settings.</p></div></div>
+        <div class="app"><h3><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/bayess-rule">Bayes&rsquo; Rule Visualizer</a></h3><div><p>How Bayes&rsquo; rule updates beliefs on evidence, shown without the formulas.</p></div></div>
+      </div>
+      <p class="group">Data literacy</p>
+      <div class="apps">
+        <div class="app"><h3><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/2d-visualizations">Data Visualizer</a></h3><div><p>How mean, variance, and correlation determine the shape of data, without the technical jargon.</p></div></div>
+        <div class="app"><h3><a href="https://sites.google.com/view/seanconteteaching/teaching/apps-demos/k-means-gmm-dbscan-comparison">Clustering Comparison</a></h3><div><p>K-means, Gaussian mixture modeling, and density-based clustering compared on the same data in real time.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-as">
+    <div><h2 id="h-as">Assignments</h2><p class="side">Instructions for the major assignments in my courses.</p></div>
+    <ul class="syl">
+      <li><a href="https://sites.google.com/view/seanconteteaching/teaching/assignment-instructions/intro-paper-instructions">Paper instructions</a><span>Introduction to Philosophy</span></li>
+      <li><a href="https://sites.google.com/view/seanconteteaching/teaching/assignment-instructions/ethics-paper-instructions">Paper instructions</a><span>Ethics</span></li>
+      <li><a href="https://sites.google.com/view/seanconteteaching/teaching/assignment-instructions/ethics-group-instructions">Group project instructions</a><span>Ethics</span></li>
+    </ul>
+  </section>
+
+  <section class="sec" aria-labelledby="h-now">
+    <div><h2 id="h-now">Fall 2026</h2><p class="side">Syllabi for this semester&rsquo;s sections at CCD.</p></div>
+    <ul class="syl">
+      <li><a href="https://seanconte.github.io/syllabi/26FA-Logic-700/">Logic</a><span>PHI 1013-700</span></li>
+      <li><a href="https://seanconte.github.io/syllabi/26FA-Ethics-001/">Ethics</a><span>PHI 1012-001</span></li>
+      <li><a href="https://seanconte.github.io/syllabi/26FA-Ethics-003/">Ethics</a><span>PHI 1012-003</span></li>
+      <li><a href="https://seanconte.github.io/syllabi/26FA-Ethics-70L/">Ethics</a><span>PHI 1012-70L</span></li>
+      <li><a href="https://seanconte.github.io/syllabi/26FA-Intro-004/">Introduction to Philosophy</a><span>PHI 1011-004</span></li>
+    </ul>
+  </section>
+
+  <section class="sec" aria-labelledby="h-past" style="margin-bottom:96px">
+    <div><h2 id="h-past">Courses taught</h2></div>
+    <div>
+      <div class="inst">
+        <h3>Community College of Denver</h3>
+        <table>
+          <tr><td>Ethics</td><td>13 sections, Fall 2024 to present</td></tr>
+          <tr><td>Introduction to Philosophy</td><td>7 sections, Fall 2024 to present</td></tr>
+          <tr><td>Logic</td><td>3 sections, Spring 2026 to present</td></tr>
+        </table>
+      </div>
+      <div class="inst">
+        <h3>Front Range Community College</h3>
+        <table>
+          <tr><td>Introduction to Philosophy</td><td>5 sections, Summer 2024 to Spring 2025</td></tr>
+          <tr><td>Logic</td><td>2 sections, Fall 2024 and Spring 2025</td></tr>
+          <tr><td>Ethics</td><td>Spring 2025</td></tr>
+          <tr><td>Philosophy of Death and Dying</td><td>Fall 2024</td></tr>
+        </table>
+      </div>
+      <div class="inst">
+        <h3>Texas A&amp;M University</h3>
+        <table>
+          <tr><td>Introduction to Logic</td><td>Summers 2018 and 2019</td></tr>
+          <tr><td>Introduction to Logic, teaching assistant</td><td>21 sections, Fall 2017 to Fall 2020</td></tr>
+          <tr><td>Introduction to Philosophy</td><td>4 sections, Spring 2021 to Fall 2022</td></tr>
+          <tr><td>Philosophy of Mind</td><td>Spring 2023</td></tr>
+          <tr><td>Environmental Ethics, teaching assistant</td><td>Spring 2019</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>SEAN dot CONTE at CCD dot EDU</span>
+    <a href="other.html">Reading and side projects</a>
+  </div>
+</footer>
+
+</body>
+</html>
