@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV | Sean Conte</title>
+<meta name="description" content="Curriculum vitae of Sean Conte, Assistant Professor of Philosophy at the Community College of Denver.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F4F2;--surface:#FFFFFF;--ink:#16202B;--ink2:#55616C;--ink3:#8C969E;--line:#D3DAD9;--wash:#E6ECEA;--sv:#2E78C7;
+  --serif:"STIX Two Text","STIX Two",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--sv);outline-offset:3px;border-radius:2px}
+
+.bar{position:sticky;top:0;z-index:10;background:rgba(241,244,242,.94);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
+.bar-inner{max-width:1120px;margin:0 auto;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:var(--sans);font-size:15px}
+.bar .name{font-weight:600;text-decoration:none}
+.bar nav{display:flex;gap:22px}
+.bar nav a{text-decoration:none;color:var(--ink2);padding:4px 0;border-bottom:2px solid transparent}
+.bar nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+main{max-width:1120px;margin:0 auto;padding:0 32px}
+
+.intro{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end;padding:80px 0 72px}
+.portrait{margin:0}
+.portrait .frame{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--wash);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-family:var(--sans);font-size:14px}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait figcaption{font-family:var(--sans);font-size:12.5px;color:var(--ink3);margin-top:8px}
+h1{font-weight:500;font-size:clamp(2.6rem,5.2vw,4.2rem);line-height:1.02;letter-spacing:-.015em;margin:0 0 14px}
+.role{font-size:1.35rem;line-height:1.35;margin:0 0 22px}
+.degrees{list-style:none;margin:0 0 26px;padding:0;font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--ink2)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;font-family:var(--sans);font-size:15px}
+.contact .mail{letter-spacing:.02em}
+.btn{display:inline-block;font-weight:500;text-decoration:none;border:1px solid var(--ink);border-radius:5px;padding:7px 16px}
+.btn:hover{background:var(--ink);color:var(--surface)}
+
+.rows{border-top:1px solid var(--line);margin-bottom:96px}
+.rowi{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;padding:44px 0;border-bottom:1px solid var(--line)}
+.rowi h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.rowi h2 a{text-decoration:none}
+.rowi h2 a:hover{text-decoration:underline}
+.rowi p{margin:0 0 .9em;max-width:36em}
+.rowi p:last-child{margin-bottom:0}
+.lead{font-size:1.45rem;line-height:1.35}
+.more{font-family:var(--sans);font-size:15px;font-weight:500}
+
+footer{border-top:1px solid var(--line);font-family:var(--sans);font-size:14px;color:var(--ink2)}
+footer .inner{max-width:1120px;margin:0 auto;padding:22px 32px 40px}
+
+@media (max-width:860px){
+  .intro,.rowi{grid-template-columns:1fr;gap:28px}
+  .intro{padding:44px 0 48px}
+  .portrait{max-width:280px}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  main,.bar-inner,footer .inner{padding-left:18px;padding-right:18px}
+}
+
+.top{padding:80px 0 56px;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:end}
+.top p{margin:0;max-width:36em}
+blockquote{margin:0 0 22px;font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.25;font-style:italic;max-width:22em}
+blockquote+.cite{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:-10px 0 26px}
+.sec{border-top:1px solid var(--line);padding:52px 0;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px}
+.sec h2{font-weight:500;font-size:1.7rem;line-height:1.2;margin:0}
+.sec .side{font-family:var(--sans);font-size:15px;color:var(--ink2);margin:10px 0 0;max-width:20em;line-height:1.5}
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:26px 28px;margin-bottom:22px}
+.feature h3{font-weight:500;font-size:1.55rem;margin:0 0 8px}
+.feature p{margin:0 0 .8em;max-width:36em}
+.apps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.app{padding:18px 0;border-top:1px solid var(--line)}
+.app h3{font-family:var(--sans);font-size:16.5px;font-weight:600;margin:0 0 4px}
+.app h3 a{text-decoration:none}.app h3 a:hover{text-decoration:underline}
+.app p{margin:0;font-size:17px;line-height:1.55;color:var(--ink)}
+.group{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:26px 0 4px}
+.group:first-of-type{margin-top:0}
+.links{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--sans);font-size:15px}
+.links a{font-weight:500}
+.syl{list-style:none;margin:0;padding:0;font-family:var(--sans);font-size:15.5px}
+.syl li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--line)}
+.syl li:last-child{border-bottom:1px solid var(--line)}
+.syl a{font-weight:500}
+.syl span{color:var(--ink2)}
+.inst{margin:0 0 30px}
+.inst:last-child{margin-bottom:0}
+.inst h3{font-weight:500;font-size:1.25rem;margin:0 0 6px}
+.inst table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:15px}
+.inst td{padding:8px 0;border-top:1px solid var(--line);vertical-align:top}
+.inst td:last-child{text-align:right;color:var(--ink2);padding-left:16px;white-space:nowrap}
+@media (max-width:860px){.top,.sec{grid-template-columns:1fr;gap:24px}.top{padding:44px 0 36px}.apps{grid-template-columns:1fr}}
+@media (max-width:560px){.inst td:last-child{white-space:normal}}
+.bar nav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--ink)}
+footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
+.apps{display:block}
+.app{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:16px 0;border-top:1px solid var(--line)}
+.app h3{margin:2px 0 0}
+.app p{margin:0}
+.app .sub{font-family:var(--sans);font-size:14.5px;margin-top:6px}
+.apps:last-of-type .app:last-child{border-bottom:1px solid var(--line)}
+.group{margin:30px 0 6px}
+.tl .shot{display:block;width:100%;height:auto;border-radius:6px;margin-top:28px}
+.top{align-items:start}
+@media (max-width:620px){.app{grid-template-columns:1fr;gap:4px}}
+.ph{margin:0}.ph figcaption,.phr figcaption{font-family:var(--sans);font-size:12.5px;color:var(--ink3);margin-top:8px}
+
+.cvtop{padding:64px 0 36px;border-bottom:1px solid var(--line)}
+.cvtop p{font-family:var(--sans);font-size:15px;color:var(--ink2);margin:10px 0 0}
+.cvs{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:0 64px;padding:36px 0;border-bottom:1px solid var(--line)}
+.cvs>h2{font-weight:500;font-size:1.4rem;line-height:1.25;margin:0}
+.cvs h3{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--ink2);margin:18px 0 6px}
+.cvs h3:first-child{margin-top:0}
+.r{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:7px 0;font-size:17px;line-height:1.5}
+.r .d{font-family:var(--sans);font-size:14.5px;color:var(--ink2);padding-top:2px}
+.r p{margin:4px 0 0}
+.r .ab{font-size:15.5px;color:var(--ink2)}
+.cvs:last-of-type{margin-bottom:96px}
+@media (max-width:860px){.cvs{grid-template-columns:1fr}.cvs>h2{margin-bottom:12px}}
+@media (max-width:560px){.r{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="name" href="index.html">Sean Conte</a>
+    <nav aria-label="Site">
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html" aria-current="page">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="cvtop" aria-labelledby="h1">
+    <h1 id="h1">Curriculum vitae</h1>
+    <p>Sean Conte, SEAN dot CONTE at CCD dot EDU</p>
+  </section>
+  <section class="cvs"><h2>Areas of specialization and competence</h2><div><div class="cvrows"><div class="r"><div class="d">AOS</div><div class="c">Social and Formal Epistemology; Philosophy of Science</div></div><div class="r"><div class="d">AOC</div><div class="c">Logic; Decision Theory; Feminist Epistemology; Philosophy of Mind; Philosophy of AI; Ethics</div></div></div></div></section><section class="cvs"><h2>Academic appointments</h2><div><div class="cvrows"><div class="r"><div class="d">2025&ndash;present</div><div class="c">Assistant Professor of Philosophy, Community College of Denver, Denver, CO</div></div><div class="r"><div class="d">2024&ndash;2025</div><div class="c">Instructor of Philosophy, Community College of Denver, Denver, CO</div></div><div class="r"><div class="d">2024&ndash;2025</div><div class="c">Instructor of Philosophy, Front Range Community College, Westminster, CO</div></div><div class="r"><div class="d">2017&ndash;2023</div><div class="c">Instructor and Teaching Assistant, Texas A&amp;M University, College Station, TX</div></div></div></div></section><section class="cvs"><h2>Education</h2><div><div class="cvrows"><div class="r"><div class="d">2017&ndash;2023</div><div class="c">Ph.D. in Philosophy, Texas A&amp;M University, College Station, TX<p>Dissertation: <i>From Evidence to Opinions: Exploring Variance in Scientific Communities</i></p><p>Committee: Kenny Easwaran, chair; Martin Peterson; Nathan Howard; Yoonsuck Choe (Computer Science and Engineering)</p><p>Logic &amp; Decision Theory Interdisciplinary Master&rsquo;s Equivalency, with graduate coursework in computer science, economics, psychology, and mathematics</p></div></div><div class="r"><div class="d">2013&ndash;2017</div><div class="c">B.A. in Philosophy and Mathematics, Fort Lewis College, Durango, CO<p>Minor in Economics</p></div></div></div></div></section><section class="cvs"><h2>Manuscripts</h2><div><h3>Complete</h3><div class="cvrows"><div class="r"><div class="d">2026</div><div class="c">&ldquo;Shifting between Modal &amp; Social Variance: The Instrumental Value of Diversity in Hedging against the Unpredictability of Evidence.&rdquo; Submitting to <i>Philosophy of Science</i>, November 2026.<p class="ab">Shows that the variance of probabilistic evidence appears either as disagreement within a community or as unpredictability across its possible outcomes, depending on how members&rsquo; evidence overlaps.</p></div></div></div><h3>In preparation</h3><div class="cvrows"><div class="r"><div class="d"></div><div class="c">&ldquo;Wise Cascades: Information Cascades and the Wisdom of Crowds.&rdquo; Extended abstract accepted at Complex Networks 2026; full paper to be submitted, December 2026.<p class="ab">Unifies the canonical cascade and wisdom-of-crowds models through a trust parameter, and proves that any target level of reliability can be reached by a correct cascade.</p></div></div><div class="r"><div class="d"></div><div class="c">&ldquo;Mereological Conflict in Scientific Communities.&rdquo; To be submitted, December 2026.<p class="ab">Surveys and taxonomizes problems in which what raises each member&rsquo;s expected accuracy lowers the community&rsquo;s, relates them to existing problems in the literature, and shows that several established models contain such conflicts that have gone unnoticed.</p></div></div><div class="r"><div class="d"></div><div class="c">&ldquo;Human&ndash;AI Inquiry and the Topology of Epistemic Dependence.&rdquo;<p class="ab">Models AI systems as locally adapting features of a community&rsquo;s information infrastructure, and studies how the resulting dynamics affect the community&rsquo;s resilience and plasticity.</p></div></div></div></div></section><section class="cvs"><h2>Refereed presentations</h2><div><div class="cvrows"><div class="r"><div class="d">December 2026</div><div class="c">&ldquo;Diversity and Stability in LLM Agent Populations: The Social&ndash;Modal Variance Trade-off,&rdquo; SocialAgent Workshop, NeurIPS 2026, Atlanta, GA. Poster (forthcoming; non-archival).</div></div><div class="r"><div class="d">December 2026</div><div class="c">&ldquo;Emergent Epistemic Authority and Mereological Conflict in Sequential Networks,&rdquo; Complex Networks 2026, Granada, Spain. Extended abstract (forthcoming).</div></div><div class="r"><div class="d">June 2026</div><div class="c">&ldquo;Shifting between Modal and Social Variance: How Randomness of Evidence Results in a Conflict between a Community and Its Members,&rdquo; Formal Epistemology Workshop, University of Colorado Boulder.</div></div><div class="r"><div class="d">June 2020</div><div class="c">&ldquo;Selective Sharing: How to Not Lie and Polarize People,&rdquo; Formal Epistemology Workshop, University of California, Irvine (online). Poster.</div></div></div></div></section><section class="cvs"><h2>Invited talks and commentary</h2><div><div class="cvrows"><div class="r"><div class="d">October 2025</div><div class="c">&ldquo;Diversity in Evidence: How Separating Pools of Evidence Can Be Better Than Centralizing Them,&rdquo; Center for Values and Social Policy, University of Colorado Boulder</div></div><div class="r"><div class="d">August 2025</div><div class="c">Commentator, &ldquo;Disability, Bad-Difference, and the Base Rate Fallacy,&rdquo; Rocky Mountain Ethics Congress</div></div><div class="r"><div class="d">March 2022</div><div class="c">&ldquo;Generalizing the Zollman Effect,&rdquo; Texas A&amp;M Philosophy Colloquium</div></div></div></div></section><section class="cvs"><h2>Teaching and mentoring</h2><div><h3>Instructor of record</h3><div class="cvrows"><div class="r"><div class="d">2024&ndash;present</div><div class="c">Community College of Denver. Introduction to Philosophy; Ethics; Logic (every semester). In-person and online sections.</div></div><div class="r"><div class="d">2024&ndash;2025</div><div class="c">Front Range Community College. Introduction to Philosophy; Ethics; Logic; Philosophy of Death and Dying. In-person and remote sections.</div></div><div class="r"><div class="d">2018&ndash;2023</div><div class="c">Texas A&amp;M University. Introduction to Logic; Introduction to Philosophy; Philosophy of Mind. In-person, hybrid, remote, and online sections.</div></div></div><h3>Teaching assistant</h3><div class="cvrows"><div class="r"><div class="d">2017&ndash;2021</div><div class="c">Texas A&amp;M University. Introduction to Logic (leading discussion sections); Environmental Ethics. In-person and remote sections.</div></div></div><h3>Undergraduate research mentoring</h3><div class="cvrows"><div class="r"><div class="d">2026&ndash;present</div><div class="c">Faculty Mentor, Undergraduate Research Group, Community College of Denver. Students develop research questions, survey relevant literature, and scope projects using formal models.</div></div><div class="r"><div class="d">2020&ndash;2022</div><div class="c">Director, MSGBSSN Undergraduate Research Group, Texas A&amp;M University. Supervised research teams totaling twenty students over two years, supported by the Aggie Research Program. Students built and analyzed agent-based models of epistemic communities and presented their work at the Aggie Research Symposium.</div></div></div></div></section><section class="cvs"><h2>Courses taught and prepared to teach</h2><div><div class="cvrows"><div class="r"><div class="d">Taught</div><div class="c">Introduction to Philosophy; Ethics; Logic; Philosophy of Mind; Philosophy of Death and Dying</div></div><div class="r"><div class="d">Prepared to teach</div><div class="c">Epistemology; Social Epistemology; Feminist Epistemology; Formal Epistemology; Philosophy of Science; Decision Theory; Philosophy of Language; Philosophy of AI</div></div></div></div></section><section class="cvs"><h2>Pedagogical training and course development</h2><div><div class="cvrows"><div class="r"><div class="d">Training</div><div class="c">Graduate Seminar in Pedagogy, Texas A&amp;M University; Online Basics Training and Advanced Online Training, Community College of Denver</div></div><div class="r"><div class="d">Course design</div><div class="c">Built the model online course shell for PHI 1013: Logic, Community College of Denver, for use by faculty across the department; designed introductory and intermediate philosophy courses for in-person, hybrid, remote, and asynchronous online formats</div></div><div class="r"><div class="d">Logic assessment</div><div class="c">Created the Prior Learning Assessment for PHI 1013: Logic, Front Range Community College</div></div><div class="r"><div class="d">Teaching tools</div><div class="c">Built interactive web applications for formal languages, truth tables, propositional proofs, probability, expected value, and hypothesis testing, designed with accessibility in mind and used as the backbone of my logic course (<a href="teaching.html#apps">see the apps</a>)</div></div></div></div></section><section class="cvs"><h2>Technical skills</h2><div><div class="cvrows"><div class="r"><div class="d"></div><div class="c">Python; R; NetLogo; JavaScript/HTML/CSS; LaTeX; agent-based and network modeling; interactive web applications</div></div></div></div></section><section class="cvs"><h2>Service and leadership</h2><div><h3>Professional</h3><div class="cvrows"><div class="r"><div class="d">2026</div><div class="c">Reviewer, Russ Shafer-Landau, <i>Living Ethics</i>, 3rd edition, for the 4th edition revision, Oxford University Press</div></div><div class="r"><div class="d">2022&ndash;2023</div><div class="c">Research assistant to Martin Peterson, <i>Ethics in the Gray Area: A Gradualist Theory of Right and Wrong</i> (Cambridge University Press, 2023)</div></div></div><h3>Community College of Denver</h3><div class="cvrows"><div class="r"><div class="d">2026&ndash;present</div><div class="c">Founder and faculty organizer, CCD Ethics Bowl team</div></div><div class="r"><div class="d">2026&ndash;present</div><div class="c">Member, First Gen Forward Committee</div></div><div class="r"><div class="d">2026&ndash;present</div><div class="c">Co-lead, Faculty Learning Community on C. Thi Nguyen&rsquo;s <i>The Score</i></div></div><div class="r"><div class="d">2026&ndash;present</div><div class="c">Developer, <a href="https://seanconte.github.io/teaching-with-ai/workshops/">AI workshop series</a>, Humanities, Literature, and Philosophy Department</div></div><div class="r"><div class="d">Fall 2026</div><div class="c">Facilitator, &ldquo;Voices of Our Generation: Building Hope for the Future&rdquo;</div></div><div class="r"><div class="d">2025&ndash;2026</div><div class="c">Member, AI Governance Committee</div></div><div class="r"><div class="d">2025&ndash;2026</div><div class="c">Department and program assessment, Philosophy Department</div></div><div class="r"><div class="d">Fall 2025</div><div class="c">Member, Humanities, Literature, and Philosophy Teaching Innovation Group</div></div></div><h3>Texas A&amp;M University</h3><div class="cvrows"><div class="r"><div class="d">2021&ndash;2022</div><div class="c">President, Graduate Students in Philosophy</div></div><div class="r"><div class="d">2019&ndash;2022</div><div class="c">Founder and organizer, Group for Analytic Metaphysics &amp; Epistemology</div></div><div class="r"><div class="d">2018&ndash;2020</div><div class="c">Organizer, T3 Foundations of Probability, Texas A&amp;M Triads for Transformation</div></div><div class="r"><div class="d">2018&ndash;2020</div><div class="c">Organizer, Interdisciplinary Group for Set Theory in Philosophy</div></div></div></div></section><section class="cvs"><h2>Awards and honors</h2><div><div class="cvrows"><div class="r"><div class="d">2018</div><div class="c">Davenport Essay Award, Department of Philosophy, Texas A&amp;M University</div></div><div class="r"><div class="d">2017</div><div class="c">Outstanding Senior in Philosophy, Fort Lewis College</div></div><div class="r"><div class="d">2013</div><div class="c">Outstanding First-Year Student in Philosophy, Fort Lewis College</div></div></div></div></section>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>SEAN dot CONTE at CCD dot EDU</span>
+    <a href="other.html">Reading and side projects</a>
+  </div>
+</footer>
+
+</body>
+</html>
