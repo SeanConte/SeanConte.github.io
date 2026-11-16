@@ -189,12 +189,12 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 <section class="program" aria-label="The research program">
   <div>
     <p>The projects fit into a larger picture of feedback between a community and the institutions through which it inquires. Journals, review norms, platforms, and AI systems shape the options open to members. The choices members make produce collective dynamics, and those dynamics reshape the institutions in turn.</p>
-    <p>I treat AI as an institution of this kind. A system that many people consult belongs to the structure a community inquires through, alongside a shared dataset or a review process, so I model it there instead of adding it to the network as another agent.</p>
+    <p>I treat AI as an institution of this kind. Instead of modeling AI as an agent, I model it by changes to the structure of an epistemic environment.</p>
     <ol class="toc" id="toc" aria-label="Projects, most recent first">
       <li><a href="#mereological" data-from="30" data-to="150"><span class="t">Mereological conflict</span><span class="st">In preparation</span><span class="note">Choices that raise each member&rsquo;s expected accuracy can lower the community&rsquo;s.</span></a></li>
       <li><a href="#wise-cascades" data-from="30" data-to="150"><span class="t">Wise cascades</span><span class="st">Complex Networks 2026</span><span class="note">How far members defer to their peers decides how reliable the community&rsquo;s cascades are.</span></a></li>
-      <li><a href="#evidential-variance" data-from="-90" data-to="150"><span class="t">The conservation of evidential variance</span><span class="st">NeurIPS 2026 workshop</span><span class="note">Who pools evidence with whom decides where the variance in that evidence shows up.</span></a></li>
-      <li><a href="#modal-social" data-from="-90" data-to="150"><span class="t">Modal and social variance</span><span class="st">FEW 2026, under review</span><span class="note">Overlap in members&rsquo; evidence trades disagreement for unpredictability.</span></a></li>
+      <li><a href="#evidential-variance" data-from="-90" data-to="150"><span class="t">The conservation of evidential variance</span><span class="st">In preparation</span><span class="note">Who pools evidence with whom decides where the variance in that evidence shows up.</span></a></li>
+      <li><a href="#modal-social" data-from="-90" data-to="150"><span class="t">Modal and social variance</span><span class="st">FEW 2026, NeurIPS 2026 workshop</span><span class="note">Overlap in members&rsquo; evidence trades disagreement for unpredictability.</span></a></li>
       <li><a href="#sharing" data-from="30" data-to="150"><span class="t">Selective sharing</span><span class="st">FEW 2020</span><span class="note">Sharing only the evidence one thinks will help can leave a community failing together or split into entrenched camps.</span></a></li>
       <li class="next"><a href="#human-ai" data-from="-90" data-to="270"><span class="t">Human&ndash;AI inquiry</span><span class="st">Next project</span><span class="note">Recommending systems adapt to how a community uses them, closing the loop.</span></a></li>
     </ol>
@@ -276,7 +276,7 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 <section class="project" id="evidential-variance" aria-labelledby="h-ev">
   <div>
     <h2 id="h-ev">The conservation of evidential variance</h2>
-    <p class="status"><span>Application to populations of LLM agents at a NeurIPS 2026 workshop</span></p>
+    <p class="status"><span>Paper in preparation</span></p>
     <div class="prose">
       <p>The modal and social trade-off is one case of a more general decomposition. The variance of the evidence a community gathers divides into three parts. Individual variance is the spread among the samples within a single member&rsquo;s evidence. Social variance is the spread between members. Modal variance is the spread between the community&rsquo;s possible aggregate outcomes.</p>
       <p class="eq">EV = IV + SV + MV</p>
@@ -314,7 +314,7 @@ footer a{color:var(--ink2)}footer a:hover{color:var(--ink)}
 <section class="project" id="modal-social" aria-labelledby="h-ms">
   <div>
     <h2 id="h-ms">Modal and social variance</h2>
-    <p class="status"><span>Presented at the Formal Epistemology Workshop, 2026</span><span>Under review</span></p>
+    <p class="status"><span>Presented at the Formal Epistemology Workshop, 2026</span><span>Application to populations of LLM agents at a NeurIPS 2026 workshop</span><span>Under review</span></p>
     <div class="prose">
       <p>Evidence produced by a probabilistic process varies from sample to sample, and judgments formed from that evidence inherit the variation. The variance divides into social variance, the disagreement among a community&rsquo;s members, and modal variance, the unpredictability of where the community as a whole ends up. The split follows from the law of total variance, and the trade-off between modal and social variance depends on the degree of overlap between the members&rsquo; evidence. Greater overlap makes members more alike and makes the community&rsquo;s outcome less predictable.</p>
       <p>This gives one account of why diversity in evidence is valuable to a community.</p>
@@ -509,7 +509,7 @@ function axisText(g,x,y,t,anchor,size,fill){return S("text",{x:x,y:y,"text-ancho
 
 /* ---------- 4. mereological conflict ---------- */
 (function(){
-  var M=7,Wn=40,qi=0.7,seed=29,us,ui;
+  var M=7,Wn=40,qi=0.7,seed=2109,us,ui;
   var sk=$("mc-k"),sc=$("mc-c"),grid=$("mc-grid"),curve=$("mc-curve");
   function gen(){var r=rngFrom(seed);us=[];ui=[];for(var w=0;w<Wn;w++){us.push(r());var row=[];for(var i=0;i<M;i++)row.push(r());ui.push(row);}
     var idx=[];for(var w2=0;w2<Wn;w2++)idx.push(w2);idx.sort(function(a,b){return us[a]-us[b];});
